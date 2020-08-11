@@ -21,7 +21,7 @@
     ("ca2e59377dc1ecee2a1069ec7126b453fa1198fed946304abb9a5b8c7ad5404d" default)))
  '(global-display-line-numbers-mode t)
  '(menu-bar-mode nil)
- '(package-selected-packages (quote (go-complete auto-complete minsk-theme)))
+ '(package-selected-packages (quote (neotree go-complete auto-complete minsk-theme)))
  '(save-place-mode t)
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
@@ -47,4 +47,3 @@
       "Kill all other buffers."
       (interactive)
       (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
-
