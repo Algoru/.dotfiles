@@ -42,3 +42,9 @@
                           (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
 
 (ac-config-default)
+
+(defun kill-other-buffers ()
+      "Kill all other buffers."
+      (interactive)
+      (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
+
