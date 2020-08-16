@@ -1,5 +1,5 @@
 (desktop-save-mode 1)
-(add-to-list 'load-path "~/emacs")
+(add-to-list 'load-path "C:\\Users\\alvar\\AppData\\Roaming\\emacs-load-path")
 
 (require 'package)
 (autoload 'go-mode "go-mode" nil t)
@@ -21,7 +21,9 @@
     ("ca2e59377dc1ecee2a1069ec7126b453fa1198fed946304abb9a5b8c7ad5404d" default)))
  '(global-display-line-numbers-mode t)
  '(menu-bar-mode nil)
- '(package-selected-packages (quote (neotree go-complete auto-complete minsk-theme)))
+ '(package-selected-packages
+   (quote
+    (emojify emmet-mode format-all prettier-js neotree go-complete auto-complete minsk-theme)))
  '(save-place-mode t)
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
@@ -40,10 +42,13 @@
 (add-hook 'before-save-hook 'gofmt-before-save)
 (add-hook 'go-mode-hook (lambda ()
                           (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
+(add-hook 'after-init-hook #'global-emojify-mode)
 
 (ac-config-default)
+
 
 (defun kill-other-buffers ()
       "Kill all other buffers."
       (interactive)
       (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
+(put 'upcase-region 'disabled nil)
