@@ -45,10 +45,12 @@
 (add-hook 'after-init-hook #'global-emojify-mode)
 
 (ac-config-default)
-
+(drag-stuff-global-mode 1)
+(drag-stuff-define-keys)
 
 (defun kill-other-buffers ()
       "Kill all other buffers."
       (interactive)
       (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
 (put 'upcase-region 'disabled nil)
+
