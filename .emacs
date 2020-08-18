@@ -23,7 +23,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (emojify emmet-mode format-all prettier-js neotree go-complete auto-complete minsk-theme)))
+    (drag-stuff emojify emmet-mode format-all prettier-js neotree go-complete auto-complete minsk-theme)))
  '(save-place-mode t)
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
@@ -53,4 +53,6 @@
       (interactive)
       (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
 (put 'upcase-region 'disabled nil)
+
+(global-set-key [f8] 'neotree-toggle)
 
