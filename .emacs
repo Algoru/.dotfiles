@@ -13,13 +13,15 @@
  '(global-display-line-numbers-mode t)
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(company typescript-mode lsp-ui vscode-dark-plus-theme yasnippet use-package fzf lsp-mode flycheck go-mode dracula-theme))
+   '(prettier-js magit vue-mode neotree company typescript-mode lsp-ui vscode-dark-plus-theme yasnippet use-package fzf lsp-mode flycheck go-mode dracula-theme))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(tooltip-mode nil))
 
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
+
+
 
 (use-package lsp-mode
 	     :ensure t
@@ -73,4 +75,11 @@
 (global-set-key [(meta shift up)]  'move-line-up)
 (global-set-key [(meta shift down)] 'move-line-down)
 (global-set-key [(meta shift j)] 'godef-jump-other-window)
+(global-set-key [f8] 'neotree-toggle)
 
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
