@@ -16,15 +16,13 @@ Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 " Golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Rust
+Plug 'rust-lang/rust.vim'
 " Autocomplete
-Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Theme
 Plug 'morhetz/gruvbox'
-" Snippets
-Plug 'ncm2/ncm2-ultisnips'
-Plug 'SirVer/ultisnips'
 " Status Bar
 Plug 'vim-airline/vim-airline'
 " Git
