@@ -114,7 +114,11 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Install CoC Extensions
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-go', 'coc-rls', 'coc-python', 'coc-java', 'coc-toml', 'coc-xml', 'coc-yaml']
+let g:coc_global_extensions = [
+            \'coc-json', 'coc-git', 'coc-go',
+            \'coc-rls', 'coc-python', 'coc-java', 
+            \'coc-toml', 'coc-xml', 'coc-yaml', 'coc-clangd',
+            \]
 
 " Rust Configuration
 let g:rustfmt_autosave = 1
